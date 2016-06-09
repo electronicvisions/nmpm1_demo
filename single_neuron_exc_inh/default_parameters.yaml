@@ -1,0 +1,43 @@
+---
+duration: 20000.0
+DAC:
+  E_syni: 0
+  E_synx: 1023
+  I_convi: 250
+  I_convx: 250
+  I_gl: 300
+  I_pl: 40
+  V_syntci: 300
+  V_syntcx: 300
+synaptic_input:
+  excitatory:
+    multiplicity: 2
+    weight: 10.0
+    # weight: 0.005
+    spike_times:
+      start: 1000.0
+      stop: 2400.0
+      step: 0.5
+  inhibitory:
+    multiplicity: 2
+    weight: 10.0
+    # weight: 0.008
+    spike_times:
+      start: 2600.0
+      stop: 4000.0
+      step: 0.5
+neuron:
+  size: 4
+  model: "IF_cond_exp"
+  parameters:
+    cm: 0.2
+    e_rev_E: 1.6
+    e_rev_I: 0.1
+    tau_m: 0.1
+    tau_refrac: 1.0
+    tau_syn_E: 10.0
+    tau_syn_I: 10.0
+    v_reset: 0.87
+    v_rest: 1.05
+    v_thresh: 1.4
+...
